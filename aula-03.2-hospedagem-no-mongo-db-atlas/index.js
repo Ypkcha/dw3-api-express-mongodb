@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/', gameRoutes)
 
 // Iniciando a conexão com o MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/apithegames")
+mongoose.connect("mongodb://127.0.0.1:27017/apithegames_aninhado")
 
 // Iniciando o servidor da API
 const port = 4000;

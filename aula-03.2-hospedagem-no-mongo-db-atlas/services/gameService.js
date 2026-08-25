@@ -18,15 +18,15 @@ class gameService {
         }
     }
     // MÉTODO PARA CADASTRAR JOGOS
-    async Create(title, year, platform, price) {
+    async Create(title, year, price, descriptions) {
         try {
             // Enviando os dados a serem cadastrados para o Model
             const newGame = new Game({
                 // title: title,
                 title,
                 year,
-                platform,
-                price
+                price,
+                descriptions
             });
             // Aguardar a operação de cadastro
             await newGame.save(); // .save() é o método do mongoose para cadastrar
@@ -47,14 +47,14 @@ class gameService {
     }
 
     //  MÉTODO PARA ALTERAR UM JOGO
-    async Update(id, title, year, platform, price) {
+    async Update(id, title, year, price, descriptions) {
         try {
             await Game.findByIdAndUpdate(id, {
                 // title : title
                 title,
                 year,
-                platform,
-                price
+                price,
+                descriptions
             })
             console.log(`O jogo com a id ${id} foi alterado.`)
         } catch (error) {

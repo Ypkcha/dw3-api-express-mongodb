@@ -23,13 +23,13 @@ const createGame = async (req, res) => {
         // const title = req.body.title
         // const year = req.body.year
         // Coletando dados enviados (formulário, da requisição, etc) e gravando nas variáveis
-        // const { title, year, platform, price } = req.body;
-        const title = req.body.title
-        const year = req.body.year
-        const platform = req.body.platform
-        const price = req.body.price
+        // const title = req.body.title
+        // const year = req.body.year
+        // const platform = req.body.platform
+        // const price = req.body.price
+        const { title, year, price, descriptions } = req.body;
         // Enviando dados para o Service cadastrar
-        await gameService.Create(title, year, platform, price);
+        await gameService.Create(title, year, price, descriptions);
         res.status(201).json({ message: "Jogo cadastrado com sucesso!" })
         // Cod. 201 (CREATED) -> Recurso criado com sucesso no servidor
     } catch (error) {
@@ -66,9 +66,9 @@ const updateGame = async (req, res) => {
         // Validando o ObjectID
         if (ObjectId.isValid(id)) {
             // Coletando os dados que serão alterados
-            const { title, year, platform, price } = req.body
+            const { title, year, price, descriptions } = req.body
             // Enviando os dados para o service
-            await gameService.Update(id, title, year, platform, price);
+            await gameService.Update(id, title, year, price, descriptions);
             res.status(200).json({ message: 'Jogo atualizado com sucesso.' });
         } else {
             res.status(400).json({ error: 'Requisição mal formada, ID inválido.' })
