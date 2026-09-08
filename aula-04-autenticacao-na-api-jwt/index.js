@@ -10,10 +10,6 @@ import User from "./models/Users.js"
 import gameRoutes from './routes/gameRoutes.js'
 import userRoutes from "./routes/userRoutes.js";
 
-<<<<<<< HEAD
-
-=======
->>>>>>> be396cec54db56684b0c809fd6c2bedd8c5f4bd6
 // Carregando Express
 const app = express();
 
