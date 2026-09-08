@@ -1,7 +1,8 @@
 // Importar o Express
 import express from "express";
 // Importar o Mongoose
-import mongoose from "mongoose"
+//import mongoose from "mongoose"
+import mongoose from "./config/db-connection.js";
 // Importar o Model
 import Game from "./models/Games.js"
 // Importar as rotas (endpoints)
@@ -18,7 +19,7 @@ app.use(express.json());
 app.use('/', gameRoutes)
 
 // Iniciando a conexão com o MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/apithegames_aninhado")
+//mongoose.connect("mongodb://127.0.0.1:27017/apithegames_aninhado")
 
 // Iniciando o servidor da API
 const port = 4000;
