@@ -1,0 +1,21 @@
+{
+  "name": "dw3-api-express-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Ypkcha/dw3-api-express-mongodb#readme",
+  "bugs": {
+    "url": "https://github.com/Ypkcha/dw3-api-express-mongodb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ypkcha/dw3-api-express-mongodb.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon index.js"
+  }
+}
